@@ -13,7 +13,14 @@ def isprimep(n):
         return False
 
     sqrn = int(float(n)**0.5)
-    for k in range(3, sqrn, 2):
+    for k in range(3, sqrn + 2, 2):
         if n % k == 0:
             return False
     return True
+
+
+# cleaner >>>
+def isprimep(n):
+    'determins whether n is prime'
+    return n % 2 != 0 and all(n % k != 0
+                              for k in range(3, int(float(n)**0.5) + 2, 2))
