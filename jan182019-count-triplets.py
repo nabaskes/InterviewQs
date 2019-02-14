@@ -20,7 +20,6 @@ def count_triplets(arr, n):
             for k in range(j+1, len(arr)):
                 if (arr[i] + arr[j] + arr[k]) < n:
                     count += 1
-                    print(str(arr[i]) + ' ' + str(arr[j]) + ' ' + str(arr[k]))
     return count
 
 
